@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../services/data.service";
 
 @Component({
   selector: 'app-profiles-display',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profiles-display.component.css']
 })
 export class ProfilesDisplayComponent implements OnInit {
+  user: any;
+  userRepos:any;
+  username: string = 'IanSang'
+  imageWidth: number = 150;
+  imageHeight: number = 200;
+  constructor(private dataService: DataService) { }
 
-  constructor() { }
+
+  findUser () {
+    this.dataService.getUser().subscribe(user => {
+      console.log(user);
+      this.user = user;
+    });
+
+  }
 
   ngOnInit(): void {
+    this.findUser()
   }
 
 }
