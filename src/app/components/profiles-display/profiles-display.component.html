@@ -5,11 +5,50 @@
     </div>
   </nav>
   <div class="container">
-    <form>
-      <div class="form-group mt-2">
-        <label>User Search:</label>
-        <input type="text" name="search" placeholder="Search..." >
+    <div class="row mt-2">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup)="findUser()">
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-8 col-md-offset-2">
+        <div *ngIf="user">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">{{user.name}}</h4>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}">
+                </div>
+                <div class="col-md-8">
+                  <div class="stats p-2">
+                    <button type="button" class="btn btn-success m-1">{{user.public_repos}} Public Repos</button>
+                    <button type="button" class="btn btn-secondary m-1">{{user.public_gists}} Public Gists</button>
+                    <button type="button" class="btn btn-info m-1">{{user.followers}} Followers</button>
+                    <button type="button" class="btn btn-primary m-1">{{user.following}} Following</button>
+                  </div>
+                  <br>
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
+                    <li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
+                    <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
+                    <li class="list-group-item"><strong>Blog: </strong>{{user.blog}}</li>
+                    <li class="list-group-item"><strong>Member Since: </strong>{{user.created_at}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
