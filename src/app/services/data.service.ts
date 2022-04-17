@@ -9,7 +9,7 @@ export class DataService {
   public username:string= "IanoSang";
   public userRepos!: string;
   public clientId: string = "69a77d3a9dcb6f2f7356";
-  public clientSecret: string = "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";
+  public clientSecret: string = "513786bae47c5689e2a3e24aba5635c0a13e0e8e";
   // public apikey:string='be05ad82ef1dec303061648a172836e81613bc78';
 
   constructor( private http: HttpClient) {
