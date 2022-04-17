@@ -318,3 +318,6 @@
 .widget-49 .widget-49-meeting-action a {
   text-transform: uppercase;
 }
+img{
+  border-radius: 50%;
+}
