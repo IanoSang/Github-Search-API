@@ -9,6 +9,7 @@
       <div class="col-md-6">
         <form>
           <div class="form-group">
+            <label>Search Users</label>
             <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup)="findUser()">
           </div>
         </form>
@@ -25,7 +26,7 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-4">
-                  <img class="img-thumbnail github-avatar" src="{{user.avatar_url}}">
+                  <img class="img-thumbnail" src="{{user.avatar_url}}" alt="Avatar">
                 </div>
                 <div class="col-md-8">
                   <div class="stats p-2">
@@ -35,7 +36,7 @@
                     <button type="button" class="btn btn-primary m-1">{{user.following}} Following</button>
                   </div>
                   <br>
-                  <ul class="list-group">
+                  <ul class="list-group p-2">
                     <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
                     <li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
                     <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
@@ -49,6 +50,41 @@
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="repos" *ngIf="user.public_repos">
+    <div class="card-header">
+      <h2 class="text-center">{{user.name}}'s Repos</h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 p-3" *ngFor="let repo of userRepos">
+          <div class="card card-margin">
+            <div class="card-header no-border">
+              <h5 class="card-title">{{repo.name}}</h5>
+            </div>
+            <div class="card-body pt-0">
+              <div class="widget-49">
+                <div class="widget-49-title-wrapper">
+                  <div class="widget-49-date-warning m-4">
+                    <span class="widget-49-date-day p-2"></span>
+                    <span class="widget-49-date-month p-2">{{repo.language}}</span>
+                  </div>
+                  <div class="widget-49-meeting-info">
+                    <span class="widget-49-pro-title">Created:</span>
+                    <span class="widget-49-meeting-time"> {{repo.created_at}}</span>
+                  </div>
+                </div>
+                <div class="widget-49-meeting-points">
+                  <p class="text-center">{{repo.description}}</p>
+                </div>
+                <div class="widget-49-meeting-action">
+                  <a href="{{repo.html_url}}" class="btn btn-sm btn-flash-border-warning">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

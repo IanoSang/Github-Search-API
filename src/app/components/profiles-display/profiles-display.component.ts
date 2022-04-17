@@ -20,6 +20,10 @@ export class ProfilesDisplayComponent implements OnInit {
       console.log(user);
       this.user = user;
     });
+    this.dataService.getRepos().subscribe(repos => {
+      console.log(repos);
+      this.userRepos = repos;
+    })
 
   }
 
