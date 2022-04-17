@@ -9,13 +9,20 @@ import {DataService} from "../../services/data.service";
 export class ProfilesDisplayComponent implements OnInit {
   user: any;
   userRepos:any;
-  username: string = 'IanSang'
-  imageWidth: number = 150;
-  imageHeight: number = 200;
-  constructor(private dataService: DataService) { }
+  username: any;
+
+  constructor(private dataService: DataService) {
+    this.dataService.getUser().subscribe(user =>{
+      this.user =user;
+    })
+    this.dataService.getRepos().subscribe(repos =>{
+      this.userRepos = repos;
+    })
+  }
 
 
   findUser () {
+    this.dataService.updateUsername(this.username);
     this.dataService.getUser().subscribe(user => {
       console.log(user);
       this.user = user;
@@ -26,6 +33,7 @@ export class ProfilesDisplayComponent implements OnInit {
     })
 
   }
+
 
   ngOnInit(): void {
     this.findUser()

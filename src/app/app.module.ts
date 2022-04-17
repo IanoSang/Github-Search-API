@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfilesDisplayComponent } from './components/profiles-display/profiles-display.component';
 import { ReposDisplayComponent } from './components/repos-display/repos-display.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -14,7 +15,8 @@ import { ReposDisplayComponent } from './components/repos-display/repos-display.
   declarations: [
     AppComponent,
     ProfilesDisplayComponent,
-    ReposDisplayComponent
+    ReposDisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
