@@ -17,4 +17,8 @@ export class DataService {
   getUser() {
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
   }
+  getRepos() {
+    return this.http.get('https://api.github.com/users/' + this.username + '/repos'+ "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
+  }
+
 }
