@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ProfilesDisplayComponent } from './components/profiles-display/profiles-display.component';
 import { ReposDisplayComponent } from './components/repos-display/repos-display.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { TimeAgoPipe } from './time-ago.pipe';
 
 // @ts-ignore
 // @ts-ignore
@@ -16,7 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     ProfilesDisplayComponent,
     ReposDisplayComponent,
-    NavbarComponent
+    NavbarComponent,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
