@@ -9,6 +9,7 @@ import { ReposDisplayComponent } from './components/repos-display/repos-display.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TimeAgoPipe } from './time-ago.pipe';
 import { ButtonHighlightDirective } from './button-highlight.directive';
+import { FooterComponent } from './components/footer/footer.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -20,7 +21,8 @@ import { ButtonHighlightDirective } from './button-highlight.directive';
     ReposDisplayComponent,
     NavbarComponent,
     TimeAgoPipe,
-    ButtonHighlightDirective
+    ButtonHighlightDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

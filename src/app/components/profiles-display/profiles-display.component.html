@@ -1,16 +1,17 @@
 <div class="container-fluid">
   <div class="container">
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row p-3">
+      <div class="col-md-4">
         <form>
-          <div class="form-group">
-            <label>Search Users</label>
-            <input type="text" class="form-control" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup.enter)="findUser()">
+          <div class="form-group m-3">
+            <div class="d-flex">
+              <label>Search Users</label>
+              <input type="text" class="form-control p-2" placeholder="Github Username" [(ngModel)]="username" name="username" (keyup.enter)="findUser()">
+            </div>
           </div>
         </form>
       </div>
-    </div>
-    <div class="row p-5">
+
       <div class="col-md-8 col-md-offset-2">
         <div *ngIf="user">
           <div class="panel panel-default">
@@ -32,7 +33,8 @@
                   </div>
                   <br>
                   <ul class="list-group p-2">
-                    <li class="list-group-item"><strong>Username: </strong>{{user.login}}</li>
+                    <li class="list-group-item">
+                      <strong>Username: </strong>{{user.login}}</li>
                     <li class="list-group-item"><strong>Location: </strong>{{user.location}}</li>
                     <li class="list-group-item"><strong>Email: </strong>{{user.email}}</li>
                     <li class="list-group-item"><strong>Blog: </strong>{{user.blog}}</li>
@@ -47,12 +49,12 @@
       </div>
     </div>
   </div>
-  <div class="repos" *ngIf="user.public_repos">
+  <div class="repos pl-5" *ngIf="user.public_repos">
     <div class="card-header">
       <h2 class="text-center">{{user.name}}'s Repos</h2>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row" id="repositories">
         <div class="col-lg-4 p-3" *ngFor="let repo of userRepos">
           <div class="card card-margin">
             <div class="card-header no-border">
