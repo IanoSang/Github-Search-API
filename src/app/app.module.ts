@@ -8,6 +8,8 @@ import { ProfilesDisplayComponent } from './components/profiles-display/profiles
 import { ReposDisplayComponent } from './components/repos-display/repos-display.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TimeAgoPipe } from './time-ago.pipe';
+import { ButtonHighlightDirective } from './button-highlight.directive';
+import { FooterComponent } from './components/footer/footer.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -18,7 +20,9 @@ import { TimeAgoPipe } from './time-ago.pipe';
     ProfilesDisplayComponent,
     ReposDisplayComponent,
     NavbarComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    ButtonHighlightDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
