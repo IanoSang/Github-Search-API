@@ -10,6 +10,7 @@ export class ProfilesDisplayComponent implements OnInit {
   user: any;
   userRepos:any;
   username: any;
+  public repos: any;
 
   constructor(private dataService: DataService) {
     this.dataService.getUser().subscribe(user =>{
