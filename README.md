@@ -25,9 +25,13 @@ The user is able to:
  
 </ol>
 
-## Quotes Corner Layout
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Quotes-Corner/blob/main/src/assets/images/quote1.png">
-<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Quotes-Corner/blob/main/src/assets/images/quote2.png">
+## GithubSearchAPI Layout
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API1.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API2.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API3.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API4.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API5.png">
+<img width="1440" alt="Screenshot" src="https://github.com/IanoSang/Github-Search-API/blob/master/src/assets/images/API6.png">
 
 ## Development server
 
