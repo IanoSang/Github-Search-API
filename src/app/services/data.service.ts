@@ -20,7 +20,7 @@ export class DataService {
   getRepos() {
     return this.http.get('https://api.github.com/users/' + this.username + '/repos'+ "?client_id=" + this.clientId + "&client_secret=" + this.clientSecret);
   }
-  updateUsername(username:string){
+  updateUsername(username:any){
     this.username = username;
   }
 
